@@ -79,6 +79,8 @@
 		fi \
 	}; f"
 
+	passport = "!python3 ${HOME}/.git/hooks/bin/git-passport/git-passport.py"
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
@@ -135,7 +137,7 @@
 [commit]
 
 	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = true
+	gpgsign = false
 
 [diff]
 
@@ -156,6 +158,13 @@
 
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+
+[http]
+	sslVerify = false
 
 [push]
 
