@@ -154,5 +154,6 @@ alias reload="exec ${SHELL} -l"
 alias path='echo -e ${PATH//:/\\n}'
 
 # Java Home settings
-alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
-alias setJdk8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
+alias setJdk7='jenv global 1.7; export JAVA_HOME=$(jenv javahome)'
+alias setJdk8='jenv global 1.8; export JAVA_HOME=$(jenv javahome)'
+alias setJdk9='jenv global 9.0; export JAVA_HOME=$(jenv javahome)'
