@@ -104,7 +104,13 @@ sudo systemsetup -setrestartfreeze on
 sudo systemsetup -setcomputersleep Off > /dev/null
 
 # Disable Notification Center and remove the menu bar icon
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
+#launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
+
+# Configure notification display time in seconds
+defaults write com.apple.notificationcenterui bannerTime 2
+
+# Disable notification display time override (return it to default)
+#defaults delete com.apple.notificationcenterui bannerTime
 
 # Disable automatic capitalization as it’s annoying when typing code
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
