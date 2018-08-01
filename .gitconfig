@@ -81,6 +81,9 @@
 
 	passport = "!python3 ${HOME}/.git/hooks/bin/git-passport/git-passport.py"
 
+[init]
+	templatedir = ~/.git/templates
+
 [apply]
 
 	# Detect whitespace errors when applying a patch

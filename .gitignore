@@ -13,4 +13,10 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 
+# Other stuff
 .extras
+bin/setWorkProxy.sh
+bin/sshj
+.gitpassport
+.path
+.vscode/
