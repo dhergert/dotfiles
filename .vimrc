@@ -50,6 +50,7 @@ set cursorline
 set tabstop=2
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set expandtab
 set list
 " Highlight searches
 set hlsearch
